@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package",
   "name": "barrelsmith",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "A barrel file generator",
   "author": "Fernando Coelho",
   "repository": "https://github.com/Fgc17/barrelsmith",
@@ -19,7 +19,7 @@
     "build": "tsc",
     "playground": "node dist/bin/cmd.js",
     "bump": "changeset",
-    "release": "changeset version && changeset publish"
+    "release": "pnpm build && changeset version && changeset publish"
   },
   "bin": {
     "barrelsmith": "dist/bin/cmd.js"

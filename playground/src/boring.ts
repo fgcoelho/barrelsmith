@@ -15,4 +15,6 @@ const xd = "";
 
 const xd2 = 1;
 
-export { xd };
+type Xd = "";
+
+export { type Xd, xd };

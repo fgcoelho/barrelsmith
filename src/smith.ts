@@ -9,7 +9,11 @@ import {
 import { join, resolve, relative, dirname, extname } from "path";
 import { BarrelForgeOptions } from "./config/config.js";
 import { parseExportsFromFile } from "./utils.js";
-import { typeDeclarations } from "./config/declarations.js";
+import {
+  ExportDeclaration,
+  TypeDeclaration,
+  typeDeclarations,
+} from "./config/declarations.js";
 import { createJiti } from "jiti";
 
 const jiti = createJiti(import.meta.url);
@@ -114,12 +118,13 @@ function collectExports(
   rootDir: string,
   dir: string,
   allNamedExports: Record<string, string[]>,
-  exportKinds: string[],
+  exportKinds: ExportDeclaration[],
   ignore: string[]
 ) {
   const entries = readdirSync(dir);
   for (const entry of entries) {
     const fullPath = join(dir, entry);
+
     const stats = statSync(fullPath);
 
     if (ignore.some((skip) => fullPath.includes(skip))) {
@@ -167,7 +172,7 @@ function buildExportStatements(
     const valueExports: string[] = [];
 
     for (const exp of exportsFromFile) {
-      const [keyword, name] = exp.split(/\s+/);
+      const [keyword, name] = exp.split(/\s+/) as [TypeDeclaration, string];
       if (typeDeclarations.includes(keyword!)) {
         typeExports.push(name!);
       } else {

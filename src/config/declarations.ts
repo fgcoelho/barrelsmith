@@ -9,7 +9,11 @@ export type TypeDeclaration =
 
 export type ValueDeclaration = "function" | "const" | "let" | "var" | "class";
 
-export type ExportDeclaration = "named" | TypeDeclaration | ValueDeclaration;
+export type ExportDeclaration =
+  | "named"
+  | "named-type"
+  | TypeDeclaration
+  | ValueDeclaration;
 
 export const typeDeclarations = [
   "type",

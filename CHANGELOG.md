@@ -1,5 +1,17 @@
 # barrelsmith
 
+## 0.0.5
+
+### Patch Changes
+
+- fix: named exports werent working with multiline and types
+
+## 0.0.4
+
+### Patch Changes
+
+- fix: TypeDeclaration
+
 ## 0.0.3
 
 ### Patch Changes
