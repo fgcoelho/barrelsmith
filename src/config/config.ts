@@ -1,10 +1,11 @@
 import { dirname } from "path";
 import { fileURLToPath } from "url";
+import { ExportDeclaration } from "./declarations";
 
 export interface BarrelForgeOptions {
   roots?: string[];
   output?: string;
-  exports?: string[];
+  exports?: Array<ExportDeclaration>;
   ignore?: string[];
   append?: string[];
 }

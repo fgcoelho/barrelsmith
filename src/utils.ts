@@ -14,12 +14,26 @@ export function parseExportsFromFile(
     "i"
   );
 
+  const namedExportRegex = /^\s*export\s*{\s*([^}]+)\s*}/;
+
   for (let line of lines) {
-    const match = line.match(exportRegex);
+    let match = line.match(exportRegex);
     if (match) {
       const kind = match[1];
       const name = match[2];
       matched.push(`${kind} ${name}`);
+      continue;
+    }
+
+    // Handle named exports if "named" is in allowedKinds
+    if (allowedKinds.includes("named")) {
+      match = line.match(namedExportRegex);
+      if (match) {
+        const names = match[1]!.split(",").map((name) => name.trim());
+        for (const name of names) {
+          matched.push(`named ${name}`);
+        }
+      }
     }
   }
 

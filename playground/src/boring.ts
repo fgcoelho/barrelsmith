@@ -10,3 +10,9 @@ export interface BoringInterface {
 export function boringFunction(): BoringInterface {
   return { boring: true };
 }
+
+const xd = "";
+
+const xd2 = 1;
+
+export { xd };
