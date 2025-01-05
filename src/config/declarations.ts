@@ -19,6 +19,12 @@ export const typeDeclarations = [
   "class",
   "abstract",
   "declare",
-];
+] as TypeDeclaration[];
 
-export const valueDeclarations = ["function", "const", "let", "var", "class"];
+export const valueDeclarations = [
+  "function",
+  "const",
+  "let",
+  "var",
+  "class",
+] as ValueDeclaration[];
