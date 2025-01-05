@@ -1,0 +1,18 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "prettier.useEditorConfig": false,
+  "prettier.configPath": "./prettier.config.mjs",
+  "prettier.prettierPath": "./node_modules/prettier",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "explorer.compactFolders": false,
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "workbench.tree.indent": 20,
+}

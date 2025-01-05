@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "barrelsmith",
+  "version": "0.0.0",
+  "description": "A barrel file generator",
+  "author": "Fernando Coelho",
+  "repository": "https://github.com/Fgc17/barrelsmith",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "playground": "node dist/bin/cmd.js",
+    "bump": "changeset",
+    "release": "changeset version && changeset publish"
+  },
+  "bin": {
+    "barrelsmith": "dist/bin/cmd.js"
+  },
+  "dependencies": {
+    "chokidar": "3.5.3",
+    "jiti": "2.4.2"
+  },
+  "devDependencies": {
+    "@changesets/cli": "2.26.2",
+    "@types/lodash": "^4.14.202",
+    "@types/node": "18.16.12",
+    "prettier": "^3.2.2",
+    "typescript": "5.3.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@8.14.1"
+}
