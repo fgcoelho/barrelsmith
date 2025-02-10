@@ -1,45 +1,43 @@
 {
-	"$schema": "https://json.schemastore.org/package",
-	"name": "barrelsmith",
-	"version": "0.0.6",
-	"description": "A barrel file generator",
-	"author": "Fernando Coelho",
-	"repository": "https://github.com/Fgc17/barrelsmith",
-	"license": "MIT",
-	"publishConfig": {
-		"access": "public"
-	},
-	"type": "module",
-	"files": [
-		"dist"
-	],
-	"main": "dist/index.js",
-	"scripts": {
-		"lint": "biome lint --error-on-warnings",
-		"format": "biome format --write",
-		"build": "rm -rf dist && tsc",
-		"dev": "pnpm run build --watch",
-		"bump": "changeset",
-		"release": "pnpm build && changeset version && changeset publish",
-		"barrelsmith": "node dist/bin/cmd.js"
-	},
-	"bin": {
-		"barrelsmith": "dist/bin/cmd.js"
-	},
-	"dependencies": {
-		"chokidar": "3.5.3",
-		"jiti": "2.4.2"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"@changesets/cli": "2.26.2",
-		"@types/lodash": "^4.14.202",
-		"@types/node": "18.16.12",
-		"prettier": "^3.2.2",
-		"typescript": "5.3.3"
-	},
-	"engines": {
-		"node": ">=18"
-	},
-	"packageManager": "pnpm@8.14.1"
+  "$schema": "https://json.schemastore.org/package",
+  "name": "barrelsmith",
+  "version": "0.0.6",
+  "description": "A barrel file generator",
+  "author": "Fernando Coelho",
+  "repository": "https://github.com/Fgc17/barrelsmith",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "biome lint --error-on-warnings",
+    "format": "biome format --write",
+    "build": "rm -rf dist && tsc",
+    "dev": "pnpm run build --watch",
+    "bump": "changeset",
+    "release": "pnpm build && changeset version && changeset publish",
+    "barrelsmith": "node dist/bin/cmd.js"
+  },
+  "bin": {
+    "barrelsmith": "dist/bin/cmd.js"
+  },
+  "dependencies": {
+    "chokidar": "3.5.3",
+    "jiti": "2.4.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@changesets/cli": "2.26.2",
+    "@types/node": "18.16.12",
+    "typescript": "5.3.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@8.14.1"
 }
