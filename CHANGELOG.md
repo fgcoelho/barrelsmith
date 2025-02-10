@@ -1,5 +1,11 @@
 # barrelsmith
 
+## 0.0.6
+
+### Patch Changes
+
+- biome and stuff
+
 ## 0.0.5
 
 ### Patch Changes

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json.schemastore.org/package",
 	"name": "barrelsmith",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "A barrel file generator",
 	"author": "Fernando Coelho",
 	"repository": "https://github.com/Fgc17/barrelsmith",
@@ -10,7 +10,9 @@
 		"access": "public"
 	},
 	"type": "module",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"main": "dist/index.js",
 	"scripts": {
 		"lint": "biome lint --error-on-warnings",
