@@ -18,7 +18,6 @@ export type ExportDeclaration =
 export const typeDeclarations = [
 	"type",
 	"interface",
-	"enum",
 	"namespace",
 	"class",
 	"abstract",
@@ -31,4 +30,5 @@ export const valueDeclarations = [
 	"let",
 	"var",
 	"class",
+	"enum",
 ] as ValueDeclaration[];
