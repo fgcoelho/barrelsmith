@@ -1,5 +1,11 @@
 # barrelsmith
 
+## 0.0.9
+
+### Patch Changes
+
+- expose generateBarrels api
+
 ## 0.0.8
 
 ### Patch Changes
