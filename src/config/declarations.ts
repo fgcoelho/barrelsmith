@@ -1,33 +1,33 @@
 export type TypeDeclaration =
-	| "type"
-	| "interface"
-	| "enum"
-	| "namespace"
-	| "class"
-	| "abstract"
-	| "declare";
+  | "type"
+  | "interface"
+  | "enum"
+  | "namespace"
+  | "class"
+  | "abstract"
+  | "declare";
 
 export type ValueDeclaration = "function" | "const" | "let" | "var" | "class";
 
 export type ExportDeclaration =
-	| "named"
-	| "named-type"
-	| TypeDeclaration
-	| ValueDeclaration;
+  | "named"
+  | "named-type"
+  | TypeDeclaration
+  | ValueDeclaration;
 
 export const typeDeclarations = [
-	"type",
-	"interface",
-	"namespace",
-	"abstract",
-	"declare",
+  "type",
+  "interface",
+  "namespace",
+  "abstract",
+  "declare",
 ] as TypeDeclaration[];
 
 export const valueDeclarations = [
-	"function",
-	"const",
-	"let",
-	"var",
-	"class",
-	"enum",
+  "function",
+  "const",
+  "let",
+  "var",
+  "class",
+  "enum",
 ] as ValueDeclaration[];

@@ -1,37 +1,37 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-	"vcs": {
-		"enabled": false,
-		"clientKind": "git",
-		"useIgnoreFile": false
-	},
-	"files": {
-		"ignoreUnknown": false,
-		"ignore": []
-	},
-	"formatter": {
-		"enabled": true,
-		"indentStyle": "tab",
-		"include": ["**/*.ts", "**/*.tsx", "**/*.json"],
-		"ignore": ["dist", "node_modules"]
-	},
-	"linter": {
-		"enabled": true,
-		"rules": {
-			"recommended": true,
-			"style": {
-				"useTemplate": "off"
-			}
-		},
-		"include": ["**/*.ts", "**/*.tsx", "**/*.json"],
-		"ignore": ["dist", "node_modules"]
-	},
-	"organizeImports": {
-		"enabled": true
-	},
-	"javascript": {
-		"formatter": {
-			"quoteStyle": "double"
-		}
-	}
+  "$schema": "https://biomejs.dev/schemas/2.4.4/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": ["**", "!node_modules", "!dist"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noExplicitAny": "off"
+      }
+    },
+    "domains": {
+      "next": "recommended",
+      "react": "recommended"
+    }
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  }
 }
