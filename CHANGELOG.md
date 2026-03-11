@@ -1,5 +1,17 @@
 # barrelsmith
 
+## 0.0.8
+
+### Patch Changes
+
+- move class to value declarations
+
+## 0.0.7
+
+### Patch Changes
+
+- move enum to value declarations
+
 ## 0.0.6
 
 ### Patch Changes
