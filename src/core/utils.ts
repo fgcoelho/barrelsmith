@@ -1,7 +1,6 @@
 import { readFileSync } from "node:fs";
 import type { ExportDeclaration } from "../config/declarations";
 
-// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 export type AnyType = any;
 
 export function parseExportsFromFile(

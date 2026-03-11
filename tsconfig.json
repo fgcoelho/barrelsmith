@@ -1,22 +1,21 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Root",
   "compilerOptions": {
-    "outDir": "dist",
-    "declaration": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
-    "incremental": false,
-    "lib": ["es2022"],
-    "module": "ES2020",
-    "moduleDetection": "force",
-    "moduleResolution": "Bundler",
-    "noUncheckedIndexedAccess": true,
-    "resolveJsonModule": true,
+    "target": "ES2022",
+    "lib": ["esnext"],
+    "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2022"
+    "strictNullChecks": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "tsBuildInfoFile": ".tsbuildinfo",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "useUnknownInCatchVariables": false,
+    "strictPropertyInitialization": false
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules"]
 }

@@ -12,12 +12,6 @@ npm install -D barrelsmith
 npm barrelsmith
 ```
 
-For watch mode:
-
-```bash
-npm barrelsmith -w
-```
-
 ### Configuration
 
 barrelsmith works with barrel forges, which are files named `barrel.forge.ts`
@@ -42,5 +36,3 @@ export default BarrelForge({
   exports: ["interface", "enum"],
 });
 ```
-
-**⚠️ By now all paths are relative to the project root.**
