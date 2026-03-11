@@ -19,7 +19,6 @@ export const typeDeclarations = [
 	"type",
 	"interface",
 	"namespace",
-	"class",
 	"abstract",
 	"declare",
 ] as TypeDeclaration[];
