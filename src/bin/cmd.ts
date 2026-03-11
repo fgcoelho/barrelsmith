@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 
-import { generateBarrels, findAllBarrelEntryConfigs } from "../core/smith.js";
+import { generateBarrels } from "../core/smith";
 
-findAllBarrelEntryConfigs()
-  .then((configs) => {
-    generateBarrels(configs);
-
+generateBarrels()
+  .then(() => {
     process.exit(0);
   })
   .catch((err) => {

@@ -58,7 +58,7 @@ function generateBarrel(config: Required<BarrelForgeOptions>) {
   console.log(`Barrel generated: ${outputAbsolute}`);
 }
 
-export async function findAllBarrelEntryConfigs(): Promise<
+async function findAllBarrelEntryConfigs(): Promise<
   Required<BarrelForgeOptions>[]
 > {
   const barrelEntryFiles: string[] = [];
@@ -104,7 +104,9 @@ export async function findAllBarrelEntryConfigs(): Promise<
   return finalConfigs;
 }
 
-export function generateBarrels(configs: Required<BarrelForgeOptions>[]) {
+export async function generateBarrels() {
+  const configs = await findAllBarrelEntryConfigs();
+
   for (const conf of configs) {
     try {
       generateBarrel(conf);
